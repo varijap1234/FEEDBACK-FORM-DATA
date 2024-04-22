@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            color: #495057;
+        }
+
+        header {
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            transition: background-color 0.3s ease-in-out;
+            position: relative; /* Ensure logo position is relative to header */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background-color: #6c757d;
+        }
+
+        section {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .welcome-text {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .columns-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .column {
+            width: 40%;
+            padding: 20px; /* Reduced padding */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px; /* Reduced margin */
+            background-color: peachpuff;
+            transition: background-color 0.3s;
+        }
+
+        .column:last-child {
+            background-color: lightgoldenrodyellow;
+        }
+
+        .form {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .form button {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .form button:hover {
+            background-color: #495057;
+        }
+
+        .logo-img {
+            max-width: 20%; /* Adjusted logo size */
+            height: auto;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        footer {
+            background-color: grey;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .column a {
+            text-decoration: none;
+        }
+
+        .column button {
+            background-color: grey;
+            color: #fff;
+            padding: 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .column:last-child button {
+            background-color: grey;
+        }
+
+        .column button:hover {
+            background-color: lightblue;
+        }
+
+        .column a.btn-primary {
+            color: grey;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo-img" src="emoticuplogo.png" alt="Company Logo">
+    </header>
+    <nav>
+        <!-- You can add navigation links here if needed -->
+    </nav>
+    <section>
+        <div class="welcome-text">
+           Hi, Welcome to the Main Menu Portal!
+        </div>
+        <div class="columns-container">
+            <div class="column">
+                <!-- Admin Portal Button -->
+                <a href="index2.html">
+                    <button>Admin Portal</button>
+                </a>
+            </div>
+
+            <div class="column">
+                <!-- User Portal Button -->
+                <a href="login.html" ><button>User Portal</button></a>
+            </div>
+        </div>
+        <!-- Welcome message for Emoticup company -->
+        <p>Welcome to Emoticup, where innovation meets excellence. We take pride in delivering top-notch industry & services.</p>
+    </section>
+   
+    <footer>
+        &copy; Copyright 2017 Emoticup. | All rights reserved.
+    </footer>
+    
+</body>
+</html>

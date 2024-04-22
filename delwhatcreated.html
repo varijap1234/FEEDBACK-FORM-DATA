@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Customer</title>
+    <!-- Add your CSS styles and Bootstrap CDN link here if needed -->
+</head>
+<body>
+    <h1>Delete Customer</h1>
+    <form id="delete-customer-form">
+        <div>
+            <label for="companyname">Company Name:</label>
+            <input type="text" id="companyname" name="companyname" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">Delete Customer</button>
+    </form>
+
+    <script>
+        document.getElementById('delete-customer-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            // Debugging: Alert to check if event listener is triggered
+            alert('Event listener triggered.');
+    
+            // Retrieve values from form inputs
+            const companyName = document.getElementById('companyname').value.trim();
+            const email = document.getElementById('email').value.trim();
+    
+            // Debugging: Alert to check retrieved values
+            alert(`Company Name: ${companyName}, Email: ${email}`);
+    
+            // Retrieve customer profiles from local storage
+            const customerProfiles = JSON.parse(localStorage.getItem('customerProfiles')) || [];
+    
+            // Debugging: Alert to check customer profiles retrieved from local storage
+            alert('Customer Profiles from Local Storage: ' + JSON.stringify(customerProfiles));
+    
+            // Find index of the customer with the provided company name and email
+            const index = customerProfiles.findIndex(profile => profile.companyname === companyName && profile.email === email);
+    
+            if (index !== -1) {
+                // Customer found, delete from array and update local storage
+                customerProfiles.splice(index, 1);
+                localStorage.setItem('customerProfiles', JSON.stringify(customerProfiles));
+                alert('Customer deleted successfully.');
+            } else {
+                // Customer not found
+                alert('Customer not found.');
+            }
+        });
+    </script>
+    
+</body>
+</html>
